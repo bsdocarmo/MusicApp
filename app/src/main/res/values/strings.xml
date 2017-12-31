@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Music App</string>
+    <string name="trends">Trends</string>
+    <string name="news">News</string>
+    <string name="songs">Songs</string>
+    <string name="albums">Albums</string>
+    <string name="artists">Artists</string>
+    <string name="home">Home</string>
+    <string name="playlist_text">Select the playlist \nand have FUN</string>
+    <string name="playlist_image">Playlist image</string>
+
+    <string name="songs_objective">Objetive: This Activity shows songs</string>
+    <string name="songs_problems">Technical problems: I don\' know how to get musics from server and show</string>
+
+    <string name="new_objective">Objetive: This Activity shows new songs</string>
+    <string name="new_problems">Technical problems: I don\' know how to get musics from server and shows ordered by release date</string>
+
+    <string name="playlist_objective">Objetive: This Activity shows the playlist\'s songs</string>
+    <string name="playlist_problems">Technical problems: I don\' know how to get musics from server and create playlists</string>
+
+    <string name="trends_objective">Objetive: This Activity shows the current hit songs</string>
+    <string name="trends_problems">Technical problems: I don\' know how to get musics from server and shows hit songs</string>
+
+    <string name="albums_objective">Objetive: This Activity shows the album songs</string>
+    <string name="albums_problems">Technical problems: I don\' know how to get musics from server and create albums</string>
+
+    <string name="artists_objective">Objetive: This Activity shows the artist discography</string>
+    <string name="artists_problems">Technical problems: I don\' know how to get musics from server and create an artist discography</string>
+</resources>
