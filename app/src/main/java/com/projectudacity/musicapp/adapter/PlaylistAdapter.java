@@ -1,7 +1,6 @@
-package adapter;
+package com.projectudacity.musicapp.adapter;
 
 import android.content.Context;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,10 +9,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.projectudacity.musicapp.R;
+import com.projectudacity.musicapp.domain.Playlist;
 
 import java.util.List;
-
-import domain.Playlist;
 
 /**
  * Created by brunodocarmo on 30/12/17.
@@ -43,23 +41,19 @@ public class PlaylistAdapter extends RecyclerView.Adapter<PlaylistAdapter.Playli
     public void onBindViewHolder(final PlaylistViewHolder holder, final int position) {
         // Update view
         final Playlist playlist = playlists.get(position);
-        holder.name.setText(playlist.name);
-        holder.name.setCompoundDrawablesWithIntrinsicBounds(0, playlist.image, 0, 0);
+        holder.name.setText(playlist.getName());
+        holder.name.setCompoundDrawablesWithIntrinsicBounds(0, playlist.getImage(), 0, 0);
 
         // Click
         if (playlistOnClickListener != null) {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    playlistOnClickListener.onClickPlaylist(holder.itemView, holder.getAdapterPosition());
-                }
-            }
+                                                   @Override
+                                                   public void onClick(View v) {
+                                                       playlistOnClickListener.onClickPlaylist(holder.itemView, holder.getAdapterPosition());
+                                                   }
+                                               }
             );
         }
-    }
-
-    public interface PlaylistOnClickListener {
-        void onClickPlaylist(View view, int index);
     }
 
     @Override
@@ -67,12 +61,15 @@ public class PlaylistAdapter extends RecyclerView.Adapter<PlaylistAdapter.Playli
         return this.playlists != null ? this.playlists.size() : 0;
     }
 
+    public interface PlaylistOnClickListener {
+        void onClickPlaylist(View view, int index);
+    }
 
     // ViewHolder with the views
     protected static class PlaylistViewHolder extends RecyclerView.ViewHolder {
 
-        CardView cardView;
         public TextView name;
+        CardView cardView;
 
         PlaylistViewHolder(View itemView) {
             super(itemView);
@@ -82,4 +79,5 @@ public class PlaylistAdapter extends RecyclerView.Adapter<PlaylistAdapter.Playli
             name = itemView.findViewById(R.id.ap_tv_playlist_item);
         }
     }
+
 }

@@ -1,22 +1,18 @@
 package com.projectudacity.musicapp.activities;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.projectudacity.musicapp.R;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import adapter.PlaylistAdapter;
-import domain.Playlist;
-import domain.PlaylistService;
+import com.projectudacity.musicapp.adapter.PlaylistAdapter;
+import com.projectudacity.musicapp.domain.PlaylistService;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -32,7 +28,12 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void bindViews() {
-        final RecyclerView playlists = findViewById(R.id.ah_rv_playlists);
+
+        ImageView payment = findViewById(R.id.abh_iv_payment);
+        payment.setOnClickListener(this);
+
+
+        RecyclerView playlists = findViewById(R.id.ah_rv_playlists);
         playlists.setLayoutManager(
                 new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
@@ -44,7 +45,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         };
 
         playlists.setAdapter(
-                new PlaylistAdapter(PlaylistService.getPlaylists(this), this, playlistOnClickListener));
+                new PlaylistAdapter(PlaylistService.getPlaylists(), this, playlistOnClickListener));
 
         TextView trends = findViewById(R.id.ah_tv_trends);
         trends.setOnClickListener(this);
@@ -66,6 +67,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
 
         switch (v.getId()) {
+            case R.id.abh_iv_payment:
+                startActivity(PaymentActivity.class);
+                break;
             case R.id.ah_tv_trends:
                 startActivity(TrendsActivity.class);
                 break;

@@ -1,6 +1,4 @@
-package domain;
-
-import android.content.Context;
+package com.projectudacity.musicapp.domain;
 
 import com.projectudacity.musicapp.R;
 
@@ -14,7 +12,7 @@ import java.util.List;
 public class PlaylistService {
 
 
-    public static List<Playlist> getPlaylists(Context context) {
+    public static List<Playlist> getPlaylists() {
         List<Playlist> playlists = new ArrayList<>();
 
         playlists.add(addItem("Brazilian Funk", R.drawable.ic_brazilian_funk));
@@ -30,8 +28,8 @@ public class PlaylistService {
 
     private static Playlist addItem(String name, int image) {
         Playlist playlist = new Playlist();
-        playlist.name = name;
-        playlist.image = image;
+        playlist.setName(name);
+        playlist.setImage(image);
         return playlist;
     }
 }

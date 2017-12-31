@@ -5,18 +5,18 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context="com.projectudacity.musicapp.activities.AlbumsActivity">
+    tools:context="com.projectudacity.musicapp.activities.PaymentActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/albums_objective"/>
+        android:text="@string/payment_objective" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/albums_problems"/>
+        android:text="@string/payment_problem" />
 
 </LinearLayout>
