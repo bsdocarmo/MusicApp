@@ -29,6 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/default_margin"
+                android:layout_marginLeft="@dimen/double_margin"
                 android:layout_marginStart="@dimen/double_margin" />
 
         </LinearLayout>
@@ -43,30 +44,35 @@
             <TextView
                 android:id="@+id/ah_tv_trends"
                 style="@style/HomeOptions"
+                android:drawableLeft="@drawable/ic_trend"
                 android:drawableStart="@drawable/ic_trend"
                 android:text="@string/trends" />
 
             <TextView
                 android:id="@+id/ah_tv_news"
                 style="@style/HomeOptions"
+                android:drawableLeft="@drawable/ic_new"
                 android:drawableStart="@drawable/ic_new"
                 android:text="@string/news" />
 
             <TextView
                 android:id="@+id/ah_tv_songs"
                 style="@style/HomeOptions"
+                android:drawableLeft="@drawable/ic_song"
                 android:drawableStart="@drawable/ic_song"
                 android:text="@string/songs" />
 
             <TextView
                 android:id="@+id/ah_tv_albums"
                 style="@style/HomeOptions"
+                android:drawableLeft="@drawable/ic_album"
                 android:drawableStart="@drawable/ic_album"
                 android:text="@string/albums" />
 
             <TextView
                 android:id="@+id/ah_tv_artists"
                 style="@style/HomeOptions"
+                android:drawableLeft="@drawable/ic_artist"
                 android:drawableStart="@drawable/ic_artist"
                 android:text="@string/artists" />
 

@@ -29,5 +29,6 @@
     <string name="artists_problems">Technical problems: I don\' know how to get musics from server and create an artist discography</string>
 
     <string name="payment_objective">Objective: activity for the user to pay to use the app</string>
-    <string name="payment_problem">Problem: We can use the Google Payment API manage payments made by users</string>
+    <string name="payment_problem">Problem: We can use the Google Payment API manage payments made by users.
+    This API has some information about the user like: credit card</string>
 </resources>

@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/ap_cv_playlist_item"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginEnd="@dimen/double_margin"
-    android:foreground="?android:attr/selectableItemBackground"
-    app:cardBackgroundColor="@android:color/transparent"
-    app:cardElevation="0dp">
+    android:layout_marginRight="@dimen/double_margin"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/ap_cv_playlist_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardElevation="0dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_play"
+            android:gravity="center" />
+
+    </android.support.v7.widget.CardView>
 
     <TextView
         android:id="@+id/ap_tv_playlist_item"
@@ -19,4 +35,4 @@
         android:textColor="@color/color_white"
         android:textSize="14sp" />
 
-</android.support.v7.widget.CardView>
+</LinearLayout>

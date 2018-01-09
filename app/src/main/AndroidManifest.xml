@@ -24,7 +24,7 @@
         <activity android:name=".activities.ArtistsActivity" />
         <activity android:name=".activities.PlaylistActivity" />
         <activity android:name=".activities.BaseActivity" />
-        <activity android:name=".activities.PaymentActivity"></activity>
+        <activity android:name=".activities.PaymentActivity" />
     </application>
 
 </manifest>

@@ -16,24 +16,35 @@ import com.projectudacity.musicapp.domain.PlaylistService;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener{
 
+    private ImageView payment;
+    private RecyclerView playlists;
+    private TextView trends;
+    private TextView news;
+    private TextView songs;
+    private TextView albums;
+    private TextView artists;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        setupToolbar();
+        bindViews();
+    }
+
+    private void setupToolbar() {
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.action_bar_home);
-
-        bindViews();
     }
 
     private void bindViews() {
 
-        ImageView payment = findViewById(R.id.abh_iv_payment);
+        payment = findViewById(R.id.abh_iv_payment);
         payment.setOnClickListener(this);
 
 
-        RecyclerView playlists = findViewById(R.id.ah_rv_playlists);
+        playlists = findViewById(R.id.ah_rv_playlists);
         playlists.setLayoutManager(
                 new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
@@ -47,19 +58,19 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         playlists.setAdapter(
                 new PlaylistAdapter(PlaylistService.getPlaylists(), this, playlistOnClickListener));
 
-        TextView trends = findViewById(R.id.ah_tv_trends);
+        trends = findViewById(R.id.ah_tv_trends);
         trends.setOnClickListener(this);
 
-        TextView news = findViewById(R.id.ah_tv_news);
+        news = findViewById(R.id.ah_tv_news);
         news.setOnClickListener(this);
 
-        TextView songs = findViewById(R.id.ah_tv_songs);
+        songs = findViewById(R.id.ah_tv_songs);
         songs.setOnClickListener(this);
 
-        TextView albums = findViewById(R.id.ah_tv_albums);
+        albums = findViewById(R.id.ah_tv_albums);
         albums.setOnClickListener(this);
 
-        TextView artists = findViewById(R.id.ah_tv_artists);
+        artists = findViewById(R.id.ah_tv_artists);
         artists.setOnClickListener(this);
     }
 
