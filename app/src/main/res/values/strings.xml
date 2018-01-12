@@ -10,25 +10,28 @@
     <string name="playlist_image">Playlist image</string>
     <string name="payment_icon">payment_icon</string>
 
-    <string name="songs_objective">Objective: This Activity shows songs</string>
-    <string name="songs_problems">Technical problems: I don\' know how to get musics from server and show</string>
+    <string name="songs_objective">Objective: This Activity shows songs.</string>
+    <string name="songs_problem">Technical problems: I don\' know how to get musics from server and show.</string>
 
-    <string name="new_objective">Objective: This Activity shows new songs</string>
-    <string name="new_problems">Technical problems: I don\' know how to get musics from server and shows ordered by release date</string>
+    <string name="new_objective">Objective: This Activity shows new songs.</string>
+    <string name="new_problem">Technical problems: I don\' know how to get musics from server and shows ordered by release date.</string>
 
-    <string name="playlist_objective">Objective: This Activity shows the playlist\'s songs</string>
-    <string name="playlist_problems">Technical problems: I don\' know how to get musics from server and create playlists</string>
+    <string name="playlist_objective">Objective: This Activity shows the playlist\'s songs.</string>
+    <string name="playlist_problem">Technical problems: I don\'t know how to get musics from server and create playlist.</string>
 
-    <string name="trends_objective">Objective: This Activity shows the current hit songs</string>
-    <string name="trends_problems">Technical problems: I don\' know how to get musics from server and shows hit songs</string>
+    <string name="trends_objective">Objective: This Activity shows the current hit songs.</string>
+    <string name="trends_problem">Technical problems: I don\'t know how to get musics from server and shows hit songs.</string>
 
-    <string name="albums_objective">Objective: This Activity shows the album songs</string>
-    <string name="albums_problems">Technical problems: I don\' know how to get musics from server and create albums</string>
+    <string name="albums_objective">Objective: This Activity shows the album songs.</string>
+    <string name="albums_problem">Technical problems: I don\'t know how to get musics from server and create albums.</string>
 
-    <string name="artists_objective">Objective: This Activity shows the artist discography</string>
-    <string name="artists_problems">Technical problems: I don\' know how to get musics from server and create an artist discography</string>
+    <string name="artists_objective">Objective: This Activity shows the artist discography.</string>
+    <string name="artists_problem">Technical problems: I don\'t know how to get musics from server and create an artist discography.</string>
 
-    <string name="payment_objective">Objective: activity for the user to pay to use the app</string>
+    <string name="payment_objective">Objective: activity for the user to pay to use the app.</string>
     <string name="payment_problem">Problem: We can use the Google Payment API manage payments made by users.
-    This API has some information about the user like: credit card</string>
+    This API has some information about the user like: credit card.</string>
+
+    <string name="play_objective">Objective: activity for the user to play the song.</string>
+    <string name="play_problem">Problem: I don\'t know how to get songs from server and how to play audio.</string>
 </resources>

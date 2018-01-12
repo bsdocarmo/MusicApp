@@ -16,8 +16,9 @@ import com.projectudacity.musicapp.domain.PlaylistService;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener{
 
+    private ImageView play;
     private ImageView payment;
-    private RecyclerView playlists;
+    private RecyclerView playlist;
     private TextView trends;
     private TextView news;
     private TextView songs;
@@ -39,13 +40,15 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void bindViews() {
+        play = findViewById(R.id.abh_iv_play);
+        play.setOnClickListener(this);
 
         payment = findViewById(R.id.abh_iv_payment);
         payment.setOnClickListener(this);
 
 
-        playlists = findViewById(R.id.ah_rv_playlists);
-        playlists.setLayoutManager(
+        playlist = findViewById(R.id.ah_rv_playlists);
+        playlist.setLayoutManager(
                 new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
         PlaylistAdapter.PlaylistOnClickListener playlistOnClickListener = new PlaylistAdapter.PlaylistOnClickListener() {
@@ -55,7 +58,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             }
         };
 
-        playlists.setAdapter(
+        playlist.setAdapter(
                 new PlaylistAdapter(PlaylistService.getPlaylists(), this, playlistOnClickListener));
 
         trends = findViewById(R.id.ah_tv_trends);
@@ -76,8 +79,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-
         switch (v.getId()) {
+            case R.id.abh_iv_play:
+                startActivity(PlaylistActivity.class);
+                break;
             case R.id.abh_iv_payment:
                 startActivity(PaymentActivity.class);
                 break;
